@@ -1,0 +1,13 @@
+{
+  "name": "examples-components",
+  "version": "1.0.0",
+  "description": "Examples for Components.js",
+  "main": "index.js",
+  "repository": "git@github.com:LinkedSoftwareDependencies/Examples-Components.js.git",
+  "author": "Ruben Taelman <ruben.taelman@ugent.be>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "lsd-components": "^1.0.2"
+  }
+}
