@@ -1,0 +1,62 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/contexts/components.jsonld",
+    { "ex": "http://example.org/" }
+  ],
+  "@id": "ex:MyModule",
+  "@type": "Module",
+  "requireName": "my-module",
+  "components": [
+
+    {
+      "@id": "ex:MyModule/MyAbstractComponent",
+      "@type": "AbstractClass",
+      "requireElement": "path.to.MyAbstractComponent",
+      "comment": "This is an abstract component that is not instantiatable.",
+      "parameters": [
+        
+      ],
+      "constructorArguments": [
+        {
+          "@id": "ex:MyModule/MyAbstractComponent#constructorArguments",
+          "@type": "om:ObjectMapping"
+        }
+      ]
+    },
+
+    {
+      "@id": "ex:MyModule/MyComponent",
+      "@type": "Class",
+      "extends": "ex:MyModule/MyAbstractComponent",
+      "requireElement": "path.to.MyComponent",
+      "comment": "This is an instantiatable component.",
+      "parameters": [
+
+      ],
+      "constructorArguments": [
+        {
+          "extends": "ex:MyModule/MyAbstractComponent#constructorArguments"
+        }
+      ]
+    },
+
+    {
+      "@id": "ex:MyModule/MyComponentInstance",
+      "@type": "Instance",
+      "requireElement": "path.to.MyInstance",
+      "comment": "This component is an instance."
+    },
+
+    {
+      "@id": "ex:MyModule/MyComponentRaw",
+      "@type": "Class",
+      "extends": "ex:MyModule/MyAbstractComponent",
+      "requireElement": "path.to.MyComponent",
+      "comment": "This is an instantiatable component.",
+      "parameters": [
+        { "@id": "ex:MyModule/MyComponentRaw#param1" },
+        { "@id": "ex:MyModule/MyComponentRaw#param2" }
+      ]
+    }
+  ]
+}
