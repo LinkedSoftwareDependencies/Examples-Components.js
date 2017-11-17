@@ -5,6 +5,6 @@
   "lsd:module": "https://linkedsoftwaredependencies.org/bundles/npm/my-plugin",
   "lsd:components": "components/components.jsonld",
   "dependencies": {
-    "lsd-components": "^1.0.2"
+    "componentsjs": "^2.0.0"
   }
 }

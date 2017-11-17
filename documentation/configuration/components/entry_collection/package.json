@@ -3,6 +3,6 @@
   "main": "index.js",
   "private": true,
   "dependencies": {
-    "lsd-components": "^1.0.2"
+    "componentsjs": "^2.0.0"
   }
 }

@@ -1,5 +1,5 @@
 async function main() {
-const Loader = require('lsd-components').Loader;
+const Loader = require('componentsjs').Loader;
 
 const loader = new Loader();
 await loader.registerModuleResourcesUrl('my-module.jsonld');
