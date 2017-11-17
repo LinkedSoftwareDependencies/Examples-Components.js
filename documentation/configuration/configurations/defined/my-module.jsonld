@@ -1,0 +1,35 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/contexts/components.jsonld",
+    { "ex": "http://example.org/" }
+  ],
+  "@id": "ex:MyModule",
+  "@type": "Module",
+  "requireName": "my-module",
+  "components": [
+    {
+      "@id": "ex:MyModule/MyComponent1",
+      "@type": "Class",
+      "requireElement": "MyComponent",
+      "parameters": [
+        {
+          "@id": "ex:MyModule/MyComponent1#param1"
+        },
+        {
+          "@id": "ex:MyModule/MyComponent1#param2",
+          "unique": true
+        },
+        {
+          "@id": "ex:MyModule/MyComponent1#param3",
+          "default": "ABC",
+          "unique": true
+        }
+      ]
+    },
+    {
+      "@id": "ex:MyModule/MyOtherComponent",
+      "@type": "Class",
+      "requireElement": "MyComponent"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/contexts/components.jsonld",
+    { "ex": "http://example.org/" }
+  ],
+  "@id": "http://example.org/myInstance",
+  "requireName": "my-module",
+  "requireElement": "modules.Module1",
+  "arguments": [
+    { "valueRaw": "1" },
+    { "valueRaw": "2" },
+    {
+      "fields": [
+        {
+          "keyRaw": "a",
+          "value": {
+            "fields": [
+              {
+                "keyRaw": "b",
+                "valueRaw": "c"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
