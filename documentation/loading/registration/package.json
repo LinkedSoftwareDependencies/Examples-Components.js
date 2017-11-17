@@ -1,0 +1,13 @@
+{
+  "name": "my-module",
+  "main": "index.js",
+  "private": true,
+  "lsd:module": "https://linkedsoftwaredependencies.org/bundles/npm/my-plugin",
+  "lsd:components": "components/components.jsonld",
+  "lsd:contexts": {
+    "http://example.org/mycontext.jsonld": "components/context.jsonld"
+  },
+  "dependencies": {
+    "lsd-components": "^1.0.2"
+  }
+}

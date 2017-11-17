@@ -1,0 +1,6 @@
+{
+  "@context": "http://example.org/mycontext.jsonld",
+  "@id": "http://example.org/myInstance",
+  "@type": "ex:MyModule/MyComponent",
+  "ex:MyModule/MyComponent#name": "John"
+}

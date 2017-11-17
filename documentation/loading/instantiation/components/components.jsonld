@@ -1,0 +1,9 @@
+{
+  "@context": "https://linkedsoftwaredependencies.org/contexts/components.jsonld",
+  "@id": "http://example.org/MyModule",
+  "@type": "Module",
+  "requireName": "my-module",
+  "import": [
+    "MyComponent.jsonld"
+  ]
+}
