@@ -1,0 +1,113 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/contexts/components.jsonld",
+    { "ex": "http://example.org/" }
+  ],
+  "@id": "ex:MyModule",
+  "@type": "Module",
+  "requireName": "my-module",
+  "components": [
+    {
+      "@id": "ex:MyModule/MyComponent1",
+      "@type": "Class",
+      "requireElement": "MyComponent",
+      "parameters": [
+        { "@id": "ex:MyModule/MyComponent1#param1", "unique": true },
+        { "@id": "ex:MyModule/MyComponent1#param2", "unique": true }
+      ],
+      "constructorArguments": [
+        { "@id": "ex:MyModule/MyComponent1#param1" },
+        { "@id": "ex:MyModule/MyComponent1#param2" }
+      ]
+    },
+
+    {
+      "@id": "ex:MyModule/MyComponent2",
+      "@type": "Class",
+      "requireElement": "MyComponent",
+      "parameters": [
+        { "@id": "ex:MyModule/MyComponent2#param1" },
+        { "@id": "ex:MyModule/MyComponent2#param2" }
+      ],
+      "constructorArguments": [
+        {
+          "elements": [
+            "ex:MyModule/MyComponent2#param1",
+            "ex:MyModule/MyComponent2#param2"
+          ]
+        }
+      ]
+    },
+
+    {
+      "@id": "ex:MyModule/MyComponent3",
+      "@type": "Class",
+      "requireElement": "MyComponent",
+      "parameters": [
+        { "@id": "ex:MyModule/MyComponent3#param1", "unique": true },
+        { "@id": "ex:MyModule/MyComponent3#param2", "unique": true }
+      ],
+      "constructorArguments": [
+        {
+          "fields": [
+            {
+              "keyRaw": "param1",
+              "value": "ex:MyModule/MyComponent3#param1"
+            },
+            {
+              "keyRaw": "param2",
+              "value": "ex:MyModule/MyComponent3#param2"
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "@id": "ex:MyModule/MyComponent4",
+      "@type": "Class",
+      "requireElement": "MyComponent",
+      "parameters": [
+        { "@id": "ex:MyModule/MyComponent4#param1", "unique": true },
+        { "@id": "ex:MyModule/MyComponent4#param2", "unique": true }
+      ],
+      "constructorArguments": [
+        {
+          "fields": [
+            {
+              "keyRaw": "param1",
+              "value": "ex:MyModule/MyComponent4#param1"
+            },
+            {
+              "keyRaw": "param2",
+              "value": {
+                "fields": [
+                  {
+                    "keyRaw": "param21",
+                    "value": "ex:MyModule/MyComponent4#param2"
+                  },
+                  {
+                    "keyRaw": "constant1",
+                    "valueRaw": "CONSTANT1"
+                  },
+                  {
+                    "keyRaw": "array",
+                    "value": {
+                      "elements": [
+                        "ex:MyModule/MyComponent4#param1",
+                        "ex:MyModule/MyComponent4#param2",
+                        {
+                          "valueRaw": "CONSTANT2"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

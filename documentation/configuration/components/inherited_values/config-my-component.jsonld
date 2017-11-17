@@ -1,0 +1,17 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/contexts/components.jsonld",
+    { "ex": "http://example.org/" }
+  ],
+  "@graph": [
+    {
+      "@id": "ex:myComponent1",
+      "@type": "ex:MyModule/MyComponent1",
+      "ex:MyModule/MyComponent1#param1": "SOMETHING"
+    },
+    {
+      "@id": "ex:myComponent2",
+      "@type": "ex:MyModule/MyComponent2"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/contexts/components.jsonld",
+    { "ex": "http://example.org/" }
+  ],
+  "@id": "ex:MyModule",
+  "@type": "Module",
+  "requireName": "my-module",
+  "components": [
+    {
+      "@id": "ex:MyModule/MyComponent",
+      "@type": "Class",
+      "requireElement": "MyComponent",
+      "parameters": [
+        {
+          "@id": "ex:MyModule/MyComponent#MyParam1",
+          "default": "this is the default value"
+        },
+        {
+          "@id": "ex:MyModule/MyComponent#MyParam2",
+          "defaultScoped": {
+            "defaultScope": "ex:MyModule/MyComponent",
+            "defaultScopedValue": "this is the default value for MyComponent"
+          }
+        },
+        {
+          "@id": "ex:MyModule/MyComponent#MyParam3",
+          "defaultScoped": [
+            {
+              "defaultScope": "ex:MyModule/MyComponent1",
+              "defaultScopedValue": "this is the default value for MyComponent1"
+            },
+            {
+              "defaultScope": "ex:MyModule/MyComponent2",
+              "defaultScopedValue": "this is the default value for MyComponent2"
+            }
+          ],
+          "default": "this is the default value for all other components"
+        }
+      ],
+      "constructorArguments": [
+        { "@id": "ex:MyModule/MyComponent#MyParam1" },
+        { "@id": "ex:MyModule/MyComponent#MyParam2" },
+        { "@id": "ex:MyModule/MyComponent#MyParam3" }
+      ]
+    }
+  ]
+}
