@@ -1,0 +1,22 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^5.0.0/components/context.jsonld",
+    { "ex": "http://example.org/" }
+  ],
+  "@id": "ex:MyPackage",
+  "@type": "Module",
+  "requireName": "my-package",
+  "components": [
+    {
+      "@id": "ex:MyPackage/MyClass",
+      "@type": "Class",
+      "requireElement": "MyClass",
+      "parameters": [
+        { "@id": "ex:MyPackage/MyClass#name", "unique": true }
+      ],
+      "constructorArguments": [
+        { "@id": "ex:MyPackage/MyClass#name" }
+      ]
+    }
+  ]
+}
