@@ -1,5 +1,5 @@
 module.exports = {
-  MyComponent: function MyComponent(name) {
+  MyClass: function MyClass(name) {
     console.log(name);
   }
 };

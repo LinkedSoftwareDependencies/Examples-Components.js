@@ -1,0 +1,12 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^5.0.0/components/context.jsonld",
+    {
+      "ex": "http://example.org/",
+      "name": "ex:MyPackage/MyClass#name"
+    }
+  ],
+  "@id": "http://example.org/myInstance",
+  "@type": "ex:MyPackage/MyClass",
+  "name": "John"
+}

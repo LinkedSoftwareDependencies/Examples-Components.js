@@ -1,8 +1,11 @@
 {
-  "name": "my-module",
+  "name": "my-package",
   "main": "index.js",
   "private": true,
+  "version": "1.0.0",
+  "lsd:module": "https://linkedsoftwaredependencies.org/bundles/npm/my-package",
+  "lsd:components": "module.jsonld",
   "dependencies": {
-    "componentsjs": "^2.0.0"
+    "componentsjs": "^5.2.0"
   }
 }
